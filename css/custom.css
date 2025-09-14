@@ -1,0 +1,79 @@
+/* 页脚与头图透明 */
+
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+/* #nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+} */
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+/* .menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -5px;
+} */
+
+/* 导航栏下拉显示 */
+
+.nav-fixed #nav {
+  transform: translateY(58px) !important;
+  -webkit-transform: translateY(58px) !important;
+  -moz-transform: translateY(58px) !important;
+  -ms-transform: translateY(58px) !important;
+  -o-transform: translateY(58px) !important;
+}
+#nav {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+/* 增大导航栏菜单项的字体大小 ------------------------*/
+#nav .menus_items .menus_item a.site-page {
+  font-size: 1.1rem; /* 默认通常为1rem，可以逐步增大，如1.2rem, 1.3rem */
+  font-weight: bold; /* 可选：同时加粗字体，使其更醒目 */
+}
+
+/* 如果也想增大右上角图标栏（ GitHub、搜索、音乐等）的字体/图标大小 */
+/* #nav #menus .nav-right menu a {
+  font-size: 2rem;
+} */
+/* 增大搜索按钮的文字 */
+#nav #search-button {
+  font-size: 1.5rem; /* 增大按钮内所有文字 */
+  font-weight: bold; /* 可选：加粗 */
+}
+/* 增大左上角网站名称（主标题） */
+#nav #site-name {
+  font-size: 1.8rem !important; /* 调整这个值来控制大小，默认约1.5rem */
+  font-weight: 700; /* 可选：加粗字体 */
+}
